@@ -1,0 +1,237 @@
+name: Create Issue
+description: File a issue report
+title: "Summary"
+assignees: String
+labels: tracking issue, needs triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before creating an issue, please search for the behaviour in the existing issues.**
+        
+        **Please choose the labels and assignees.**
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Description
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Which steps do we need to take to reproduce this error?
+    validations:
+      required: true
+  - type: dropdown
+    id: Library
+    attributes:
+      label: Application
+      description: "Please provide the domain of library used in your project."
+      options:
+        - BLAS Library
+        - Codec Library
+        - Database Library
+        - Data Analytics Library
+        - Data Compression Library
+        - DSP Library
+        - Genomics Library
+        - HPC Library
+        - Quantitative Finace Library
+        - Security Library
+        - Solver Library
+        - Utilities Library
+        - Vision Library
+    validations:
+      required: true
+  - type: dropdown
+    id: Version
+    attributes:
+      label: Vitis Library Version
+      description: "Please provide the version of library used in your project."
+      options:
+        - 2022.1
+        - 2021.2
+        - 2021.1
+        - 2020.2
+        - 2020.1
+        - 2019.2
+    validations:
+      required: true
+  - type: dropdown
+    id: ai-engine
+    attributes:
+      label: AI Engine
+      description: If you use the AI Engine
+      options:
+        - Y
+        - N
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device Family
+      description: "Please choose the device."
+      options:
+        - 7_series
+        - All
+        - All_CPLD
+        - All_FPGA
+        - All_PROM
+        - Artix7
+        - Artix9
+        - CoolRunner
+        - CoolRunner2
+        - CoolRunner2s
+        - FPGACORE
+        - Holistic8
+        - Kintex UltraScale
+        - Kintex UltraScale Plus
+        - Kintex7
+        - Kintex7l
+        - Kria SOM
+        - NA
+        - Qspartan6
+        - Qspartan6l
+        - Ronaldo
+        - Shannon
+        - Spartan2
+        - Spartan3
+        - Spartan3A
+        - Spartan3ADSP
+        - Spartan3AN
+        - Spartan3E
+        - Spartan6
+        - Spartan6 LX
+        - Spartan6 LXT
+        - Spartan6l
+        - Spartan7
+        - System ACE CF
+        - UltraScale
+        - UltraScale Plus
+        - Versal
+        - Versal AI Core
+        - Versal AI Edge
+        - Versal AI RF
+        - Versal HBM
+        - Versal Premium
+        - Versal Prime
+        - Versal PS VIP
+        - Virtex
+        - Virtex UltraScale
+        - Virtex UltraScale Plus
+        - Virtex UltraScale XT
+        - Virtex2P
+        - Virtex4
+        - Virtex4 FX
+        - Virtex4 LX
+        - Virtex4 SX
+        - Virtex5
+        - Virtex5 FXT
+        - Virtex5 LXT
+        - Virtex5 SXT
+        - Virtex6
+        - Virtex6 CXT
+        - Virtex6 HXT
+        - Virtex6 LXT
+        - Virtex6 SXT
+        - Virtex6l
+        - Virtex7
+        - Virtex7 HT
+        - Virtex7l
+        - XA9500XL
+        - XAArtix7
+        - XASpartan3
+        - XASpartan3A
+        - XASpartan6
+        - XAZynq7000
+        - XC9500XL/XV
+        - XCF128XL
+        - XQArtix7
+        - XQKintex UltraScale
+        - XQKintex7
+        - XQRVirtex2
+        - XQRVirtex5 FXT
+        - XQRVirtexE
+        - XQVirtex
+        - XQVirtex-5 FXT
+        - XQVirtex-5 LX
+        - XQVirtex-5 SXT
+        - XQVirtex4
+        - XQVirtex5
+        - XQVirtex7
+        - XQZynq7000
+        - Zynq
+        - Zynq UltraScale Plus
+   
+     
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS Found
+      description: "Which operating system do you use? Please provide the version as well."
+      options:
+        - All
+        - CentOS6 64-bit
+        - CentOS7.1 64-bit
+        - RHEL4 WS 32bit
+        - RHEL4 WS 64bit
+        - RHEL5 WS 32bit
+        - RHEL5 WS 64bit
+        - RHEL6 WS 32bit
+        - RHEL6 WS 64bit
+        - RHEL7.1 WS 64bit
+        - SLED11 32bit
+        - SLED11 64bit
+        - Ubuntu 14.04 LTS
+        - Win7 32bit
+        - Win7 32bit CHN
+        - Win7 32bit JPN
+        - Win7 64bit
+        - Win7 64bit CHN
+        - Win7 64bit JPN
+        - Win8.1 32-bit
+        - Win8.1 64-bit
+        - Win10 64-bit
+        - Other (please specify in the description!)
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: "Please provide the platform used in your project."
+      options:
+        - 250S
+        - 250S+_Storage_Aggregator
+        - Alveo U200
+        - Alveo U25
+        - Alveo U250
+        - Alveo U280
+        - Alveo U30
+        - Alveo U50
+        - Alveo U55C
+        - Alveo U55N
+        - Alveo U880
+        - Alveo U350
+        - Alveo U65
+        - Alveo VCK5000
+        - Alveo X3522
+        - Alveo_U50_NVMe-oF
+        - Fidus
+        - KD240
+        - KR260
+        - KV240
+        - KV260
+        - Molex 250SOC
+        - Samsung_AIC_SmartSSD
+        - Samsung_U.2_SmartSSD
+ 
+  
+
+  - type: markdown
+    attributes:
+      value: |
+        **Thanks for completing our form!**
